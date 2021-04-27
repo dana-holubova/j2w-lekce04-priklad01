@@ -62,6 +62,9 @@ public class Ucastnik {
     this.fotka = fotka;
   }
 
+
+//  počítaná vlastnost, která je jen pro čtení
+//  nemá field, stačí, když jem tam getter
   public String getCeleJmeno() {
     return jmeno + " " + prijmeni;
   }

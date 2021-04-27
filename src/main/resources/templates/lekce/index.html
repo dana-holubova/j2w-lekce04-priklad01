@@ -38,24 +38,24 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Lekce 1</td>
-            <td>21. dubna 2021</td>
-            <td>18:00–20:30</td>
-            <td>V mechu</td>
+        <tr th:each="lekce, interStat : ${lekce}">
+            <td th:text="${lekce.nazev}">Lekce 1</td>
+            <td th:text="${lekce.datum}">21. dubna 2021</td>
+            <td><span th:text="${lekce.casOd}">18:00</span>–<span th:text="${lekce.casDo}">20:30</span></td>
+            <td th:text="${lekce.misto}">V mechu</td>
         </tr>
-        <tr>
-            <td>Lekce 2</td>
-            <td>28. dubna 2021</td>
-            <td>18:00–20:30</td>
-            <td>V kapradí</td>
-        </tr>
-        <tr>
-            <td>Lekce 3</td>
-            <td>5. května 2021</td>
-            <td>18:00–20:30</td>
-            <td><em>bude upřesněno</em></td>
-        </tr>
+<!--        <tr>-->
+<!--            <td>Lekce 2</td>-->
+<!--            <td>28. dubna 2021</td>-->
+<!--            <td>18:00–20:30</td>-->
+<!--            <td>V kapradí</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Lekce 3</td>-->
+<!--            <td>5. května 2021</td>-->
+<!--            <td>18:00–20:30</td>-->
+<!--            <td><em>bude upřesněno</em></td>-->
+<!--        </tr>-->
         </tbody>
     </table>
 </div>

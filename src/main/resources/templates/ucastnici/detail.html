@@ -29,6 +29,7 @@
         <div class="card-body">
             <h5 class="card-title" th:text="${ucastnik.celeJmeno}">Medvídek Pú</h5>
             <p class="card-text">Bydliště:
+<!--                bydliště se načte z modelu, pokud je nenulové, tak se zobrazí, jinak se napíše neuvedeno -->
                 <span th:if="${ucastnik.bydliste} != null" th:text="${ucastnik.bydliste}">Stokorcový les</span>
                 <em th:if="${ucastnik.bydliste} == null">neuvedeno</em>
             </p>

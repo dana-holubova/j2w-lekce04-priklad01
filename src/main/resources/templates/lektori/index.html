@@ -32,42 +32,46 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Markéta Pátková</td>
-            <td><i class="las la-bell"></i> workshopistka</td>
+        <tr th:each="lektor : ${lektori}">
+            <td th:text="${lektor.jmeno}">Markéta Pátková</td>
+<!--            v podmínce if porovnávám vlastnost role s hodnotou v enumu Role -->
+<!--            ve výsledku zmizí html element, který nesplňuje podmínku, ale zůstane po něm prázdný řádek -->
+            <td th:if="${lektor.role} == ${T(cz.czechitas.java2webapps.lekce4.entity.Role).LEKTOR}"><i class="las la-graduation-cap"></i> lektor</td>
+            <td th:if="${lektor.role} == ${T(cz.czechitas.java2webapps.lekce4.entity.Role).WORKSHOPISTKA}"><i class="las la-bell"></i> workshopistka</td>
+            <td th:if="${lektor.role} == ${T(cz.czechitas.java2webapps.lekce4.entity.Role).KOUC}"><i class="las la-laptop-code"></i> kouč</td>
         </tr>
-        <tr>
-            <td>Adam Vyšínský</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Daniel Matteoni</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Ekaterina Znatkova</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Jana Makovcová</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Pavel Kubík</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Petra Halouzková</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Vít Saidl</td>
-            <td><i class="las la-laptop-code"></i> kouč</td>
-        </tr>
-        <tr>
-            <td>Filip Jirsák</td>
-            <td><i class="las la-graduation-cap"></i> lektor</td>
-        </tr>
+<!--        <tr>-->
+<!--            <td>Adam Vyšínský</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Daniel Matteoni</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Ekaterina Znatkova</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Jana Makovcová</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Pavel Kubík</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Petra Halouzková</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Vít Saidl</td>-->
+<!--            <td><i class="las la-laptop-code"></i> kouč</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Filip Jirsák</td>-->
+<!--            <td><i class="las la-graduation-cap"></i> lektor</td>-->
+<!--        </tr>-->
         </tbody>
     </table>
 
